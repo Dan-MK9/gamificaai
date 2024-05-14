@@ -28,8 +28,52 @@ function abrirFecharMenu() {
     }
 }
 
-onresize = () => {
+window.onresize = () => {
     menu.classList.remove("menu-fechado")
     iconeX.style.display = "inline"
     iconeBarras.style.display = "none"
+}
+
+// função Carrossel 
+
+let slides = [
+    'primeiro-banner',
+    'segundo-banner',
+    'terceiro-banner'
+]
+
+let slideAtual = 0
+
+let numeroSlides = slides.length
+
+let banner = document.querySelector(".banner")
+
+banner.classList.add(slides[slideAtual])
+
+const mostrarProximoSlide = () => {
+    // Remove slide anterior
+    banner.classList.remove(slides[slideAtual])
+
+    if(slideAtual < 2 ){
+        slideAtual++
+    }else {
+        slideAtual = 0
+    }
+
+    // Renderiza o slideAtual
+    banner.classList.add(slides[slideAtual])
+}
+
+const mostrarSlideAnterior = () => {
+    // Remove slide anterior
+    banner.classList.remove(slides[slideAtual])
+
+    if(slideAtual > 0 ){
+        slideAtual--
+    }else {
+        slideAtual = numeroSlides - 1
+    }
+
+    // Renderiza o slideAtual
+    banner.classList.add(slides[slideAtual])
 }
