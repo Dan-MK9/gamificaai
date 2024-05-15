@@ -54,9 +54,9 @@ const mostrarProximoSlide = () => {
     // Remove slide anterior
     banner.classList.remove(slides[slideAtual])
 
-    if(slideAtual < 2 ){
+    if (slideAtual < 2) {
         slideAtual++
-    }else {
+    } else {
         slideAtual = 0
     }
 
@@ -68,12 +68,36 @@ const mostrarSlideAnterior = () => {
     // Remove slide anterior
     banner.classList.remove(slides[slideAtual])
 
-    if(slideAtual > 0 ){
+    if (slideAtual > 0) {
         slideAtual--
-    }else {
+    } else {
         slideAtual = numeroSlides - 1
     }
 
     // Renderiza o slideAtual
+    banner.classList.add(slides[slideAtual])
+}
+
+const slide1 = () => {
+    banner.classList.remove(slides[slideAtual]);
+
+    slideAtual = (0);
+
+    banner.classList.add(slides[slideAtual])
+}
+
+const slide2 = () => {
+    banner.classList.remove(slides[slideAtual]);
+
+    slideAtual = (1);
+
+    banner.classList.add(slides[slideAtual])
+}
+
+const slide3 = () => {
+    banner.classList.remove(slides[slideAtual]);
+
+    slideAtual = (2);
+
     banner.classList.add(slides[slideAtual])
 }
