@@ -78,26 +78,75 @@ const mostrarSlideAnterior = () => {
     banner.classList.add(slides[slideAtual])
 }
 
-const slide1 = () => {
-    banner.classList.remove(slides[slideAtual]);
+// O codigo que eu fiz kkkk
 
-    slideAtual = (0);
+// const slide1 = () => {
+//     banner.classList.remove(slides[slideAtual]);
 
-    banner.classList.add(slides[slideAtual])
+//     slideAtual = (0);
+
+//     banner.classList.add(slides[slideAtual])
+// }
+
+// const slide2 = () => {
+//     banner.classList.remove(slides[slideAtual]);
+
+//     slideAtual = (1);
+
+//     banner.classList.add(slides[slideAtual])
+// }
+
+// const slide3 = () => {
+//     banner.classList.remove(slides[slideAtual]);
+
+//     slideAtual = (2);
+
+//     banner.classList.add(slides[slideAtual])
+// }
+
+const selecionarSlide = (indiceSlide) => {
+    slides.forEach(slide => banner.classList.remove(slide))
+
+    slideAtual = indiceSlide
+
+    banner.classList.add(slides[indiceSlide])
 }
 
-const slide2 = () => {
-    banner.classList.remove(slides[slideAtual]);
+let listaCases = [
+    {
+        Image: "https://unsplash.it/600/400?image=7",
+        descricao: "Uma empresa de tecnologia lança um desafio de gamificação onde os funcionarios devem propor e implementar ideias inovadoras."
+    },
 
-    slideAtual = (1);
+    {
+        Image: "https://unsplash.it/600/400?image=1",
+        descricao: "Uma empresa de consultoria cria uma narrativa interativa para gamificação para seu programa de treinamento."
+    },
 
-    banner.classList.add(slides[slideAtual])
-}
+    {
+        Image: "https://unsplash.it/600/400?image=126",
+        descricao: "Uma empresa de vendas implementa uma competição gamificada entre equipes que competem pelo todo do ranking"
+    },
 
-const slide3 = () => {
-    banner.classList.remove(slides[slideAtual]);
+    {
+        Image: "https://unsplash.it/600/400?image=16",
+        descricao: "Uma empresa de saude promove o bem-estar dos funcionarios atraves de um desafio de gamificação de condicionamento fisíco"
+    }
+]
 
-    slideAtual = (2);
+const renderizarCases = () => {
+    let elementoLista = document.getElementById("lista-cards")
 
-    banner.classList.add(slides[slideAtual])
+    // Template Strings
+    let template = ""
+
+    listaCases.forEach(cardCase => {
+        template += `<div class="card">
+        <img src="${cardCase.Image}" alt="">
+        <p>${cardCase.descricao}</p>
+        <button>Ver mais</button>
+    </div>`
+    })
+
+    elementoLista.innerHTML = template
 }
