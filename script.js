@@ -112,27 +112,7 @@ const selecionarSlide = (indiceSlide) => {
     banner.classList.add(slides[indiceSlide])
 }
 
-let listaCases = [
-    {
-        Image: "https://unsplash.it/600/400?image=7",
-        descricao: "Uma empresa de tecnologia lança um desafio de gamificação onde os funcionarios devem propor e implementar ideias inovadoras."
-    },
-
-    {
-        Image: "https://unsplash.it/600/400?image=1",
-        descricao: "Uma empresa de consultoria cria uma narrativa interativa para gamificação para seu programa de treinamento."
-    },
-
-    {
-        Image: "https://unsplash.it/600/400?image=126",
-        descricao: "Uma empresa de vendas implementa uma competição gamificada entre equipes que competem pelo todo do ranking"
-    },
-
-    {
-        Image: "https://unsplash.it/600/400?image=16",
-        descricao: "Uma empresa de saude promove o bem-estar dos funcionarios atraves de um desafio de gamificação de condicionamento fisíco"
-    }
-]
+let listaCases = [] 
 
 const renderizarCases = () => {
     let elementoLista = document.getElementById("lista-cards")
@@ -149,4 +129,56 @@ const renderizarCases = () => {
     })
 
     elementoLista.innerHTML = template
+}
+
+const carregarCases = () => {
+    fetch("http://localhost:3000/cases")
+    .then( resposta => resposta.json() )
+    .then ( (dados) => {
+        console.log(dados);
+        listaCases = dados
+        renderizarCases()
+    })
+}
+
+const solicitarOrcamento = () => {
+    // pegar valores dos inputs
+
+    let valorNome = document.getElementById("campo-nome").value
+    let valorEmail = document.getElementById("campo-email").value
+    let valorDescricao = document.getElementById("campo-descricao").value
+
+    // console.log(valorNome);
+    // console.log(valorEmail);
+    // console.log(valorDescricao);
+
+    // organizar objeto com os valores
+
+    let dadosForm = {
+        nome: valorNome,
+        email: valorEmail,
+        descricao: valorDescricao
+    }
+
+    // enviar requisição para a api
+
+    // 127.0.0.1 -> localhost
+    // Método HTTP POST - Create -> Cadastrar ou criar
+    fetch("http://localhost:3000/solicitacoes", {
+        method: "POST", 
+        headers:{
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dadosForm)
+    })
+    .then(resposta => console.log(resposta))
+    .catch(erro => console.error(erro))
+    
+
+        // limpar campos
+
+
+
+        // mostrar alert com mensagem de sucesso
+        // CASO ERRO - alert com msg de erro
 }
