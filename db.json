@@ -2,19 +2,23 @@
   "cases": [
     {
       "Image": "https://unsplash.it/600/400?image=7",
-      "descricao": "Uma empresa de tecnologia lança um desafio de gamificação onde os funcionarios devem propor e implementar ideias inovadoras."
+      "descricao": "Uma empresa de tecnologia lança um desafio de gamificação onde os funcionarios devem propor e implementar ideias inovadoras.",
+      "id": "6845"
     },
     {
       "Image": "https://unsplash.it/600/400?image=1",
-      "descricao": "Uma empresa de consultoria cria uma narrativa interativa para gamificação para seu programa de treinamento."
+      "descricao": "Uma empresa de consultoria cria uma narrativa interativa para gamificação para seu programa de treinamento.",
+      "id": "afd0"
     },
     {
       "Image": "https://unsplash.it/600/400?image=126",
-      "descricao": "Uma empresa de vendas implementa uma competição gamificada entre equipes que competem pelo todo do ranking"
+      "descricao": "Uma empresa de vendas implementa uma competição gamificada entre equipes que competem pelo todo do ranking",
+      "id": "187b"
     },
     {
       "Image": "https://unsplash.it/600/400?image=16",
-      "descricao": "Uma empresa de saude promove o bem-estar dos funcionarios atraves de um desafio de gamificação de condicionamento fisíco"
+      "descricao": "Uma empresa de saude promove o bem-estar dos funcionarios atraves de um desafio de gamificação de condicionamento fisíco",
+      "id": "7f2b"
     }
   ],
   "solicitacoes": [
@@ -35,6 +39,48 @@
       "nome": "fggfgddg",
       "email": "dgdfgdf",
       "descricao": "gddfgdgd"
+    },
+    {
+      "id": "ff4b",
+      "nome": "aaaaa",
+      "email": "vvv",
+      "descricao": "bbb"
+    },
+    {
+      "id": "76e6",
+      "nome": "luffy",
+      "email": "goldroger@",
+      "descricao": "eu vou ser o rei dos piratas"
+    },
+    {
+      "id": "00d6",
+      "nome": "calabreso",
+      "email": "calabreso@gamificaai.com.br",
+      "descricao": "adhilydhilyashlk"
+    },
+    {
+      "id": "0229",
+      "nome": "",
+      "email": "",
+      "descricao": ""
+    },
+    {
+      "id": "d889",
+      "nome": "calabreso",
+      "email": "calabreso@gamificaai.com.br",
+      "descricao": "carai"
+    },
+    {
+      "id": "1924",
+      "nome": "calabreso",
+      "email": "calabreso@gamificaai.com.br",
+      "descricao": "jhasjhddasaald"
+    },
+    {
+      "id": "7be9",
+      "nome": "",
+      "email": "",
+      "descricao": ""
     }
   ]
 }
